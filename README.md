@@ -71,7 +71,7 @@ For running single node clusters we can use the below tools.
 - Master nodes run the control plane
 - The control plane is a set of APIs and software that Kubernetes users interact with
 
-![Diagram1.1](../Kubernetes-basics/diagrams/diagram1.1.png)
+![Diagram1.1](diagrams/diagram1.1.png)
 
 #### Scheduling
 - Control plane schedules containers onto nodes (How?)
@@ -83,19 +83,19 @@ For running single node clusters we can use the below tools.
 - Pods are the smallest building block in Kubernetes
 - More complex and useful abstractions built on top of Pods
 
-![Diagram1.2](../Kubernetes-basics/diagrams/diagram1.2.png)
+![Diagram1.2](diagrams/diagram1.2.png)
 
 #### Kubernetes Services
 - Services define networking rules for exposing group of pods
   - Either to other pods or to the internet
 
-![Diagram1.3](../Kubernetes-basics/diagrams/diagram1.3.png)
+![Diagram1.3](diagrams/diagram1.3.png)
 
 #### Kubernetes Deployment
 - Manages the deploying configurations changes to running pods
 - Horizontal scaling
 
-![Diagram1.4](../Kubernetes-basics/diagrams/diagram1.4.png)
+![Diagram1.4](diagrams/diagram1.4.png)
 
 ### Interacting with Kubernetes
 
