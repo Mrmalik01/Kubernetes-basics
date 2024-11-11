@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: support-tier-pod
+  labels:
+    tier: support
+    env: dev
+    app: microservices
+spec:
+  containers:
+    - name: counter
+      image: lrakai/microservices:counter-v1
+      env:
+        - name: API_URL
+          value: http://app-tier-service.sd-4:8080
+
+    - name: poller
+      image: lrakai/microservices:poller-v1
+      env:
+        - name: API_URL
+          value: http://app-tier-service.sd-4:$(APP_TIER_SERVICE_SERVICE_PORT)

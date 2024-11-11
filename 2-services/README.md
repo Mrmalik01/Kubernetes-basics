@@ -2,7 +2,7 @@
 
 The pods can be restarted in different nodes or could be assigned with different IPs, therefore Pods IP can change and therefore if we cannot expose them directly (unless we assign them static IP address somehow?) Thats where the service concept helps. It acts as a load balancer and manages the requests.
 
-![Diagram1.5](diagrams/diagram1.5.png)
+![Diagram1.5](../diagrams/diagram1.5.png)
 
 - **Networking:** A service defines the networking rules for accessing Pods in the cluster and from the internet
     - Use labels to select a group of Pods
@@ -10,7 +10,7 @@ The pods can be restarted in different nodes or could be assigned with different
       - It allows the service to be accessible within the containers network and also outside the cluster itself
 - **Load Balancing:** Distribute requests across Pods in the group
 
-![Diagram1.6](diagrams/diagram1.6.png)
+![Diagram1.6](../diagrams/diagram1.6.png)
 
 Using Service as a Web Server
 ```

@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: data-tier-service
+  labels:
+    app: microservices
+    env: dev
+spec:
+  ports:
+  - port: 6379
+    protocol: TCP
+    name: redis
+  selector:
+    tier: data
+  type: ClusterIP # This is an internal service, only accessible within the cluster
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: data-tier-pod
+  labels:
+    tier: data
+    env: dev
+    app: microservices
+spec:
+  containers:
+    - name: redis
+      image: redis:latest
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 6379
