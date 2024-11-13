@@ -26,11 +26,11 @@ spec:
               # Naming pattern:
               #   IP address: <service_name>.<service_namespace>
               #   Port: needs to be extracted from SRV DNS record
-              value: http://app-tier.deployments:8080
+              value: http://app-tier.dp-5:8080
 
         - name: poller
           image: lrakai/microservices:poller-v1
           env:
             - name: API_URL
               # omit namespace to only search in the same namespace
-              value: http://app-tier:$(APP_TIER_SERVICE_PORT)
+              value: http://app-tier.dp-5:$(APP_TIER_SERVICE_PORT)
