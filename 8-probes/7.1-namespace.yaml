@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: pb
+  labels:
+    lesson: probes
+    env: dev
+    app: micro
